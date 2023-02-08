@@ -12,26 +12,28 @@ const Navbar = () => {
       setNav(!nav)
    }
    return (
-      <div className='w-full h-20 shadow-xl px-2 z-[100]'>
+      <div id='navbar' className='w-full h-20 shadow-xl px-2 z-[100]'>
          <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
-            <img className='md:w-20' src={Image} alt='LogoImage' style={{ height: '50px' }} />
+            <a href="#main">
+            <img className='md:w-20 cursor-pointer' src={Image} alt='LogoImage' style={{ height: '50px' }} />
+            </a>
             <div>
                <ul className='hidden md:flex'> 
-                  <Link to="/">
+                  <a href='#main'>
                      <li className='ml-10 text-sm uppercase hover:border-b'>Home</li>
-                  </Link>
-                  <Link to="about">
+                  </a>
+                  <a href="#about">
                      <li className='ml-10 text-sm uppercase hover:border-b'>About</li>
-                  </Link>
-                  <Link to="/">
+                  </a>
+                  <a href='#skills'>
                      <li className='ml-10 text-sm uppercase hover:border-b'>Skills</li>
-                  </Link>
-                  <Link to="/">
+                  </a>
+                  <a href='#projects'>
                      <li className='ml-10 text-sm uppercase hover:border-b'>Projects</li>
-                  </Link>
-                  <Link to="contact">
+                  </a>
+                  <a href='#contact'>
                      <li className='ml-10 text-sm uppercase hover:border-b'>Contact</li>
-                  </Link>
+                  </a>
                </ul>
                <div onClick={handleNav} className='md:hidden'>
                   <AiOutlineMenu size={25} />
@@ -56,21 +58,21 @@ const Navbar = () => {
                </div>
                <div className='py-4 flex flex-col'>
                   <ul>
-                  <Link to="/">
+                  <a className='duration-700' onClick={handleNav} href='#main'>
                      <li className='py-4 text-sm uppercase'>Home</li>
-                  </Link>
-                  <Link to="about">
+                  </a>
+                  <a className='duration-700' onClick={handleNav} href='#about'>
                      <li className='py-4 text-sm uppercase'>About</li>
-                  </Link>
-                  <Link to="/">
+                  </a>
+                  <a className='duration-700' onClick={handleNav} href='#skills'>
                      <li className='py-4 text-sm uppercase'>Skills</li>
-                  </Link>
-                  <Link to="/">
+                  </a>
+                  <a className='duration-700' onClick={handleNav} href='#projects'>
                      <li className='py-4 text-sm uppercase'>Projects</li>
-                  </Link>
-                  <Link to="contact">
+                  </a>
+                  <a className='duration-700' onClick={handleNav} href='#contact'>
                      <li className='py-4 text-sm uppercase'>Contact</li>
-                  </Link>
+                  </a>
                   </ul>
                   <div className='pt-40'>
                      <p className='uppercase tracking-widest text-[#5651e5]'>Let's Connect</p>

@@ -14,7 +14,7 @@ import FireBaseImage from '../assets/skills/firebase.png'
 
 const Skills = () => {
   return (
-    <div className='w-[98%] sm:w-[99%] lg:h-screen p-2'>
+    <div id='skills' className='w-[98%] sm:w-[99%] lg:h-screen p-2'>
       <div className='px-1 max-w-[1240px] mx-auto flex flex-col justify-center h-full'>
         <p className='uppercase tracking-widest text-xl text-[#5651e5]'>
           skills
@@ -24,16 +24,7 @@ const Skills = () => {
         </h2>
         <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
 
-          <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
-          <div className='grid grid-cols-2 gap-4 justify-center items-center '>
-            <div className='m-auto'>
-              <img className='w-[64px] h-[64px ]' src={HtmlImage} alt="html" />
-            </div>
-            <div className='flex flex-col justify-center items-center'>
-              <h3>HTML</h3>
-            </div>
-          </div>
-          </div>
+          
 
           <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
           <div className='grid grid-cols-2 gap-4 justify-center items-center '>
