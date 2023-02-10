@@ -1,18 +1,20 @@
 import React from 'react'
 
-const SkillItems = () => {
+const SkillItems = ({Img, title, alt}) => {
   return (
     <div>
+
       <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
           <div className='grid grid-cols-2 gap-4 justify-center items-center '>
             <div className='m-auto'>
-              <img className='w-[64px] h-[64px ]' src={HtmlImage} alt="html" />
+              <img className='w-[64px] h-[64px ]' src={Img} alt={alt} />
             </div>
             <div className='flex flex-col justify-center items-center'>
-              <h3>HTML</h3>
+              <h3>{title}</h3>
             </div>
           </div>
-          </div>
+       </div>
+
     </div>
   )
 }

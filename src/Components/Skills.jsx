@@ -1,4 +1,5 @@
 import React from 'react'
+import SkillItems from './SkillItems'
 import HtmlImage from '../assets/skills/html.png'
 import CSSImage from '../assets/skills/css.png'
 import JSImage from '../assets/skills/javascript.png'
@@ -24,128 +25,18 @@ const Skills = () => {
         </h2>
         <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
 
-          
-
-          <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
-          <div className='grid grid-cols-2 gap-4 justify-center items-center '>
-            <div className='m-auto'>
-              <img className='w-[64px] h-[64px ]' src={CSSImage} alt="html" />
-            </div>
-            <div className='flex flex-col justify-center items-center'>
-              <h3>CSS</h3>
-            </div>
-          </div>
-          </div>
-
-          <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
-          <div className='grid grid-cols-2 gap-4 justify-center items-center '>
-            <div className='m-auto'>
-              <img className='w-[64px] h-[64px ]' src={JSImage} alt="html" />
-            </div>
-            <div className='flex flex-col justify-center items-center'>
-              <h3>JavaScript</h3>
-            </div>
-          </div>
-          </div>
-
-          <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
-          <div className='grid grid-cols-2 gap-4 justify-center items-center '>
-            <div className='m-auto'>
-              <img className='w-[64px] h-[64px ]' src={ReactImage} alt="html" />
-            </div>
-            <div className='flex flex-col justify-center items-center'>
-              <h3>React</h3>
-            </div>
-          </div>
-          </div>
-
-          <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
-          <div className='grid grid-cols-2 gap-4 justify-center items-center '>
-            <div className='m-auto'>
-              <img className='w-[64px] h-[64px ]' src={ReduxImage} alt="html" />
-            </div>
-            <div className='flex flex-col justify-center items-center'>
-              <h3>Redux</h3>
-            </div>
-          </div>
-          </div>
-
-          <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
-          <div className='grid grid-cols-2 gap-4 justify-center items-center '>
-            <div className='m-auto'>
-              <img className='w-[64px] h-[64px ]' src={ReactNativeImage} alt="html" />
-            </div>
-            <div className='flex flex-col justify-center items-center'>
-              <h3>React Native</h3>
-            </div>
-          </div>
-          </div>
-
-          <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
-          <div className='grid grid-cols-2 gap-4 justify-center items-center '>
-            <div className='m-auto'>
-              <img className='w-[64px] h-[64px ]' src={TailwindImage} alt="html" />
-            </div>
-            <div className='flex flex-col justify-center items-center'>
-              <h3>Tailwind</h3>
-            </div>
-          </div>
-          </div>
-
-          <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
-          <div className='grid grid-cols-2 gap-4 justify-center items-center '>
-            <div className='m-auto'>
-              <img className='w-[64px] h-[64px ]' src={BootStrapImage} alt="html" />
-            </div>
-            <div className='flex flex-col justify-center items-center'>
-              <h3>BootStrap</h3>
-            </div>
-          </div>
-          </div>
-
-          <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
-          <div className='grid grid-cols-2 gap-4 justify-center items-center '>
-            <div className='m-auto'>
-              <img className='w-[64px] h-[64px ]' src={MaterialUIImage} alt="html" />
-            </div>
-            <div className='flex flex-col justify-center items-center'>
-              <h3>Material UI</h3>
-            </div>
-          </div>
-          </div>
-
-          <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
-          <div className='grid grid-cols-2 gap-4 justify-center items-center '>
-            <div className='m-auto'>
-              <img className='w-[64px] h-[64px ]' src={StyledComponentsImage} alt="html" />
-            </div>
-            <div className='flex flex-col justify-center items-center'>
-              <h3>Styled Components</h3>
-            </div>
-          </div>
-          </div>
-
-          <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
-          <div className='grid grid-cols-2 gap-4 justify-center items-center '>
-            <div className='m-auto'>
-              <img className='w-[64px] h-[64px ]' src={GithubImage} alt="html" />
-            </div>
-            <div className='flex flex-col justify-center items-center'>
-              <h3>Github</h3>
-            </div>
-          </div>
-          </div>
-
-          <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
-          <div className='grid grid-cols-2 gap-4 justify-center items-center '>
-            <div className='m-auto'>
-              <img className='w-[64px] h-[64px ]' src={FireBaseImage} alt="html" />
-            </div>
-            <div className='flex flex-col justify-center items-center'>
-              <h3>FireBase</h3>
-            </div>
-          </div>
-          </div>
+          <SkillItems Img={HtmlImage} title='HTML' alt='htmlImg' />
+          <SkillItems Img={CSSImage} title='CSS' alt='cssImg' />
+          <SkillItems Img={JSImage} title='JavaScript' alt='jsImg' />
+          <SkillItems Img={ReactImage} title='React' alt='ReactImg' />
+          <SkillItems Img={ReduxImage} title='Redux' alt='ReduxImg' />
+          <SkillItems Img={ReactNativeImage} title='React Native' alt='ReactNativeImg' />
+          <SkillItems Img={TailwindImage} title='Tailwind' alt='TailwindImg' />
+          <SkillItems Img={BootStrapImage} title='BootStrap' alt='BootStrapImg' />
+          <SkillItems Img={MaterialUIImage} title='Material UI' alt='MaterialUIImg' />
+          <SkillItems Img={StyledComponentsImage} title='Styled Components' alt='StyledComponentsImg' />
+          <SkillItems Img={GithubImage} title='Github' alt='GithubImg' />
+          <SkillItems Img={FireBaseImage} title='FireBase' alt='FireBaseImg' />
 
         </div>        
       </div>

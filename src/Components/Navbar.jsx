@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
-import Image from '../assets/logo.png';
+import Logo from '../assets/logo_transparent.png';
+import Resume from '../assets/MuhammadAbdullahMushtaq.pdf'
 import {AiOutlineClose, AiOutlineMail, AiOutlineMenu} from 'react-icons/ai'
 import {FaGithub, FaLinkedinIn} from 'react-icons/fa'
 import {BsFillPersonLinesFill} from 'react-icons/bs'
@@ -15,7 +15,7 @@ const Navbar = () => {
       <div id='navbar' className='w-full h-20 shadow-xl px-2 z-[100]'>
          <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
             <a href="#main">
-            <img className='md:w-20 cursor-pointer' src={Image} alt='LogoImage' style={{ height: '50px' }} />
+            <img className='md:w-20 cursor-pointer' src={Logo} alt='LogoImage' style={{ height: '50px' }} />
             </a>
             <div>
                <ul className='hidden md:flex'> 
@@ -34,6 +34,9 @@ const Navbar = () => {
                   <a href='#contact'>
                      <li className='ml-10 text-sm uppercase hover:border-b'>Contact</li>
                   </a>
+                  <a href={Resume} without rel="noopener noreferrer" target="_blank">
+                     <li className='ml-10 text-sm uppercase hover:border-b'>Resume</li>
+                  </a>
                </ul>
                <div onClick={handleNav} className='md:hidden'>
                   <AiOutlineMenu size={25} />
@@ -45,7 +48,9 @@ const Navbar = () => {
                                  : 'fixed left-[-200%] top-0 ease-in duration-1000'}>
                <div>
                   <div className='w-full flex items-center justify-between' >
-                     <img style={{width: '60px', height: '30px'}} src={Image} alt='LogoImage' />
+                     <a className='duration-1000' onClick={handleNav} href="#main">
+                     <img style={{width: '60px', height: '30px'}} src={Logo} alt='LogoImage' />
+                     </a>
                      <div onClick={handleNav} className='sm:p-3 rounded-full shadow-lg shadow-gray-400 p-2.5 cursor-pointer'>
                         <AiOutlineClose/>
                      </div>
@@ -58,20 +63,23 @@ const Navbar = () => {
                </div>
                <div className='py-4 flex flex-col'>
                   <ul>
-                  <a className='duration-700' onClick={handleNav} href='#main'>
+                  <a className='duration-1000' onClick={handleNav} href='#main'>
                      <li className='py-4 text-sm uppercase'>Home</li>
                   </a>
-                  <a className='duration-700' onClick={handleNav} href='#about'>
+                  <a className='duration-1000' onClick={handleNav} href='#about'>
                      <li className='py-4 text-sm uppercase'>About</li>
                   </a>
-                  <a className='duration-700' onClick={handleNav} href='#skills'>
+                  <a className='duration-1000' onClick={handleNav} href='#skills'>
                      <li className='py-4 text-sm uppercase'>Skills</li>
                   </a>
-                  <a className='duration-700' onClick={handleNav} href='#projects'>
+                  <a className='duration-1000' onClick={handleNav} href='#projects'>
                      <li className='py-4 text-sm uppercase'>Projects</li>
                   </a>
-                  <a className='duration-700' onClick={handleNav} href='#contact'>
+                  <a className='duration-1000' onClick={handleNav} href='#contact'>
                      <li className='py-4 text-sm uppercase'>Contact</li>
+                  </a>
+                  <a href={Resume} without rel="noopener noreferrer" target="_blank">
+                     <li className='py-4 text-sm uppercase'>Resume</li>
                   </a>
                   </ul>
                   <div className='pt-40'>
