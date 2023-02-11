@@ -9,7 +9,7 @@ const Main = () => {
       <div className='w-full max-w-[1240px] mx-auto p-2 flex justify-center items-center'>
           <div>
             <p className='uppercase tracking-widest text-sm text-gray-600'>
-            Let's Build Some Design Together.
+            Let's Build Some Designs Together.
             </p>
             <h1 className='py-4 text-gray-700'>
               Hi, I'm <span className='text-[#5651e5]'>Muhammad Abdullah Mushtaq</span>

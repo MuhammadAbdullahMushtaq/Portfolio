@@ -3,13 +3,13 @@ import Image from '../assets/about.jpg'
 
 const About = () => {
   return (
-    <div id='about' className='w-full md:h-screen p-2 flex items-center py-16'>
+    <div id='about' className='w-full md:h-fit p-2 flex items-center py-4'>
       <div className='max-w-[1240px] m-auto md:grid grid-cols-3 gap-8'>
          <div className='col-span-2 px-1'>
             <p className='uppercase text-xl tracking-widest text-[#5651e5]'>About</p>
             <h2 className='py-4'>Who I Am</h2>
             <p className='py-2 text-gray-600'>
-               //I am not your normal developer
+               I am not your normal developer
             </p>
             <p className='py-2 text-gray-600'>
             I have spent the last 12 years in the fire service working as a professional firefighter &

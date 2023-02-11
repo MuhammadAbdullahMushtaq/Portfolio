@@ -15,7 +15,7 @@ import FireBaseImage from '../assets/skills/firebase.png'
 
 const Skills = () => {
   return (
-    <div id='skills' className='w-[98%] sm:w-[99%] lg:h-screen p-2'>
+    <div id='skills' className='w-[98%] sm:w-[99%] lg:h-full p-2'>
       <div className='px-1 max-w-[1240px] mx-auto flex flex-col justify-center h-full'>
         <p className='uppercase tracking-widest text-xl text-[#5651e5]'>
           skills

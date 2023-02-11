@@ -1,16 +1,16 @@
 import { React } from 'react'
-import PropertyImg from '../assets/projects/property.jpg'
+import NetflixImg from '../assets/projects/netflix.jpg'
 import { RiRadioButtonFill } from 'react-icons/ri'
 import { Link } from 'react-router-dom'
 
-const Property = () => {
+const Netflix = () => {
   return (
      <div className='w-full '>
       <div className='w-full h-[30vh] lg:h-[40vh] relative'>
          <div className='absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-black/80 z-10' />
-         <img  className='absolute z-1 h-full w-full object-cover' src={PropertyImg} alt="propertyImg" />
+         <img  className='absolute z-1 h-full w-full object-cover' src={NetflixImg} alt="cryptoImg" />
          <div className='absolute top-[70%] left-[50%] right-[50%] w-full max-w-[1240px] translate-x-[-50%] translate-y-[-50%] text-white z-10 pb-5 px-3'>
-            <h2 className='py-2'>Property Finder</h2>
+            <h2 className='py-2'>Netflix Clone</h2>
             <h3 className='text-[12px] sm:text-[16px]'>React JS / Tailwind / Firebase</h3>
          </div>
       </div>
@@ -37,11 +37,11 @@ const Property = () => {
                </div>
             </div>
          </div>
-      <Link to={'/#property'} ><p className='cursor-pointer underline'>Back</p></Link>
+      <Link to={'/#netflix'} ><p className='cursor-pointer underline'>Back</p></Link>
       </div>
 
    </div>
   )
 }
 
-export default Property
+export default Netflix

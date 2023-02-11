@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import Logo from '../assets/logo_transparent.png';
 import Resume from '../assets/MuhammadAbdullahMushtaq.pdf'
 import {AiOutlineClose, AiOutlineMail, AiOutlineMenu} from 'react-icons/ai'
@@ -8,32 +9,49 @@ import {BsFillPersonLinesFill} from 'react-icons/bs'
 const Navbar = () => {
    const [nav, setNav] = useState(false);
    
+   const { hash } = useLocation();
+   
+   useEffect(() => {
+        // if not a hash link, scroll to top
+        if (hash == '') {
+         window.scrollTo(0, 0);
+      }
+    // else scroll to id
+      else {
+         const id = hash.replace('#','');
+         const element = document.getElementById(id);
+         if (element) {
+            element.scrollIntoView();
+         }
+      }
+   });
+   
    const handleNav = () => {
       setNav(!nav)
    }
    return (
       <div id='navbar' className='w-full h-20 shadow-xl px-2 z-[100]'>
          <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
-            <a href="#main">
+            <Link to="/#main">
             <img className='md:w-20 cursor-pointer' src={Logo} alt='LogoImage' style={{ height: '50px' }} />
-            </a>
+            </Link>
             <div>
                <ul className='hidden md:flex'> 
-                  <a href='#main'>
+                  <Link to="/#main">
                      <li className='ml-10 text-sm uppercase hover:border-b'>Home</li>
-                  </a>
-                  <a href="#about">
+                  </Link>
+                  <Link to="/#about">
                      <li className='ml-10 text-sm uppercase hover:border-b'>About</li>
-                  </a>
-                  <a href='#skills'>
+                  </Link>
+                  <Link to='/#skills'>
                      <li className='ml-10 text-sm uppercase hover:border-b'>Skills</li>
-                  </a>
-                  <a href='#projects'>
+                  </Link>
+                  <Link to='/#projects'>
                      <li className='ml-10 text-sm uppercase hover:border-b'>Projects</li>
-                  </a>
-                  <a href='#contact'>
+                  </Link>
+                  <Link to='/#contact'>
                      <li className='ml-10 text-sm uppercase hover:border-b'>Contact</li>
-                  </a>
+                  </Link>
                   <a href={Resume} without rel="noopener noreferrer" target="_blank">
                      <li className='ml-10 text-sm uppercase hover:border-b'>Resume</li>
                   </a>
@@ -48,9 +66,9 @@ const Navbar = () => {
                                  : 'fixed left-[-200%] top-0 ease-in duration-1000'}>
                <div>
                   <div className='w-full flex items-center justify-between' >
-                     <a className='duration-1000' onClick={handleNav} href="#main">
+                     <Link className='duration-1000' onClick={handleNav} to="#main">
                      <img style={{width: '60px', height: '30px'}} src={Logo} alt='LogoImage' />
-                     </a>
+                     </Link>
                      <div onClick={handleNav} className='sm:p-3 rounded-full shadow-lg shadow-gray-400 p-2.5 cursor-pointer'>
                         <AiOutlineClose/>
                      </div>
@@ -63,21 +81,21 @@ const Navbar = () => {
                </div>
                <div className='py-4 flex flex-col'>
                   <ul>
-                  <a className='duration-1000' onClick={handleNav} href='#main'>
+                  <Link className='duration-1000' onClick={handleNav} to="#main">
                      <li className='py-4 text-sm uppercase'>Home</li>
-                  </a>
-                  <a className='duration-1000' onClick={handleNav} href='#about'>
+                  </Link>
+                  <Link className='duration-1000' onClick={handleNav} to="#about">
                      <li className='py-4 text-sm uppercase'>About</li>
-                  </a>
-                  <a className='duration-1000' onClick={handleNav} href='#skills'>
+                  </Link>
+                  <Link className='duration-1000' onClick={handleNav} to="#skills">
                      <li className='py-4 text-sm uppercase'>Skills</li>
-                  </a>
-                  <a className='duration-1000' onClick={handleNav} href='#projects'>
+                  </Link>
+                  <Link className='duration-1000' onClick={handleNav} to="#projects">
                      <li className='py-4 text-sm uppercase'>Projects</li>
-                  </a>
-                  <a className='duration-1000' onClick={handleNav} href='#contact'>
+                  </Link>
+                  <Link className='duration-1000' onClick={handleNav} to="#contact">
                      <li className='py-4 text-sm uppercase'>Contact</li>
-                  </a>
+                  </Link>
                   <a href={Resume} without rel="noopener noreferrer" target="_blank">
                      <li className='py-4 text-sm uppercase'>Resume</li>
                   </a>
