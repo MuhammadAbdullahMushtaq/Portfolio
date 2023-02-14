@@ -10,7 +10,7 @@ const Home = () => {
 
    return (
       <div>
-         <Navbar />
+         <Navbar display="" />
          <Main />
          <About />
          <Skills />
