@@ -12,7 +12,7 @@ const Crypto = () => {
       <div className='w-full h-[30vh] lg:h-[40vh] relative'>
          <div className='absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-black/80 z-10' />
          <img  className='absolute h-full w-full object-cover' src={CryptoImg} alt="cryptoImg" />
-         <div className='absolute top-[70%] left-[50%] right-[50%] w-full max-w-[1240px] translate-x-[-50%] translate-y-[-50%] text-white pb-5 px-3'>
+         <div className='z-10 absolute top-[70%] left-[50%] right-[50%] w-full max-w-[1240px] translate-x-[-50%] translate-y-[-50%] text-white pb-5 px-3'>
             <h2 className='py-2 text-2xl sm:text-[36px]'>Crypto App Clone</h2>
             <h3 className='text-[12px] sm:text-[16px]'>React JS / Tailwind / Firebase</h3>
          </div>

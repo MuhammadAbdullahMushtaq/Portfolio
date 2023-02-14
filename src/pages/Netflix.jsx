@@ -2,15 +2,18 @@ import { React } from 'react'
 import NetflixImg from '../assets/projects/netflix.jpg'
 import { RiRadioButtonFill } from 'react-icons/ri'
 import { Link } from 'react-router-dom'
+import Navbar from '../Components/Navbar'
 
 const Netflix = () => {
-  return (
-     <div className='w-full '>
+   return (
+   <>
+      <Navbar />
+      <div className='w-full'>
       <div className='w-full h-[30vh] lg:h-[40vh] relative'>
          <div className='absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-black/80 z-10' />
-         <img  className='absolute z-1 h-full w-full object-cover' src={NetflixImg} alt="cryptoImg" />
-         <div className='absolute top-[70%] left-[50%] right-[50%] w-full max-w-[1240px] translate-x-[-50%] translate-y-[-50%] text-white z-10 pb-5 px-3'>
-            <h2 className='py-2'>Netflix Clone</h2>
+         <img  className='absolute h-full w-full object-cover' src={NetflixImg} alt="cryptoImg" />
+         <div className='z-10 absolute top-[70%] left-[50%] right-[50%] w-full max-w-[1240px] translate-x-[-50%] translate-y-[-50%] text-white pb-5 px-3'>
+            <h2 className='py-2 text-2xl sm:text-[36px]'>Netflix Clone</h2>
             <h3 className='text-[12px] sm:text-[16px]'>React JS / Tailwind / Firebase</h3>
          </div>
       </div>
@@ -40,54 +43,12 @@ const Netflix = () => {
       <Link to={'/#netflix'} ><p className='cursor-pointer underline'>Back</p></Link>
       </div>
 
-   </div>
-  )
+      </div>
+      </>
+   )
 }
 
 export default Netflix
 
 // //how to change the value of a state variable when width will be 768px?
-// import React, { useLayoutEffect, useState } from 'react';
-
-// function useWindowSize() {
-//   const [size, setSize] = useState([0, 0]);
-//   useLayoutEffect(() => {
-//     function updateSize() {
-//       setSize([window.innerWidth, window.innerHeight]);
-//     }
-//     window.addEventListener('resize', updateSize);
-//     updateSize();
-//     return () => window.removeEventListener('resize', updateSize);
-//   }, []);
-//   return size;
-// }
-
-// function ShowWindowDimensions(props) {
-//   const [width, height] = useWindowSize();
-//   return <span>Window size: {width} x {height}</span>;
-// }
-
-
-// import React from 'react';
-
-// class ShowWindowDimensions extends React.Component {
-//   state = { width: 0, height: 0 };
-//   render() {
-//     return <span>Window size: {this.state.width} x {this.state.height}</span>;
-//   }
-//   updateDimensions = () => {
-//     this.setState({ width: window.innerWidth, height: window.innerHeight });
-//   };
-//   componentDidMount() {
-//     window.addEventListener('resize', this.updateDimensions);
-//   }
-//   componentWillUnmount() {
-//     window.removeEventListener('resize', this.updateDimensions);
-//   }
-// }
-
-
-
-
 //Source: https://stackoverflow.com/questions/19014250
-
