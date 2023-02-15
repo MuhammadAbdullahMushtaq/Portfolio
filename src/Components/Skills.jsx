@@ -10,7 +10,7 @@ import TailwindImage from '../assets/skills/tailwind.png'
 import BootStrapImage from '../assets/skills/bootstrap.png'
 import MaterialUIImage from '../assets/skills/materialUi.png'
 import StyledComponentsImage from '../assets/skills/styled-components.png'
-import GithubImage from '../assets/skills/github1.png'
+import GithubImage from '../assets/skills/github.png'
 import FireBaseImage from '../assets/skills/firebase.png'
 
 const Skills = () => {

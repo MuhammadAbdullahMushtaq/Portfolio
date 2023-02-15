@@ -26,7 +26,7 @@ const Navbar = ({display}) => {
             element.scrollIntoView();
          }
       }
-   },[rol])
+   },[rol,hash])
 
    const handleRol = () => {
       setRol(!rol)
@@ -40,7 +40,7 @@ const Navbar = ({display}) => {
       <div id='navbar' className='w-full h-20 shadow-xl px-2 z-[100]'>
          <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
             <Link to="/#main" onClick={handleRol}>
-            <img className='md:w-20 cursor-pointer' src={Logo} alt='LogoImage' style={{ height: '50px' }} />
+            <img className='w-[90px] h-[80px] lg:w-[150px] lg:h-[110px] md:w-[135px] md:h-[95px] sm:w-[110px] sm:h-[90px] cursor-pointer' src={Logo} alt='LogoImage' />
             </Link>
             <div>
                <ul className='hidden md:flex'> 
@@ -74,7 +74,7 @@ const Navbar = ({display}) => {
                <div>
                   <div className='w-full flex items-center justify-between' >
                      <Link className='duration-1000' onClick={handleNav} to="/#main">
-                     <img onClick={handleRol} style={{width: '60px', height: '30px'}} src={Logo} alt='LogoImage' />
+                     <img onClick={handleRol} className='w-[70px] h-[60px] sm:w-[90px] sm:h-[80px]' src={Logo} alt='LogoImage' />
                      </Link>
                      <div onClick={handleNav} className='sm:p-3 rounded-full shadow-lg shadow-gray-400 p-2.5 cursor-pointer'>
                         <AiOutlineClose/>

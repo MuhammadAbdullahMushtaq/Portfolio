@@ -13,7 +13,7 @@ const SkillItems = ({Img, title, alt}) => {
               <h3>{title}</h3>
             </div>
           </div>
-       </div>
+      </div>
 
     </div>
   )
