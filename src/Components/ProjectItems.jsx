@@ -16,7 +16,7 @@ const ProjectItems = ({title, backgroundImg, projectUrl, id}) => {
             </div>
 
 
-  )
+   )
 }
 
 export default ProjectItems

@@ -6,7 +6,7 @@ import {AiOutlineClose, AiOutlineMail, AiOutlineMenu} from 'react-icons/ai'
 import {FaGithub, FaLinkedinIn} from 'react-icons/fa'
 import {BsFillPersonLinesFill} from 'react-icons/bs'
 
-const Navbar = ({display}) => {
+const Navbar = () => {
    const [nav, setNav] = useState(false);
 
    const [rol, setRol] = useState(true);
@@ -59,9 +59,6 @@ const Navbar = ({display}) => {
                   <Link to="/#contact" onClick={handleRol}>
                      <li className='ml-10 text-sm uppercase hover:border-b'>Contact</li>
                   </Link>
-                  <a href={Resume} without rel="noopener noreferrer" target="_blank">
-                     <li className='ml-10 text-sm uppercase hover:border-b' style={{display: `${display}`}}>Resume</li>
-                  </a>
                </ul>
                <div onClick={handleNav} className='md:hidden'>
                   <AiOutlineMenu size={25} />
@@ -103,32 +100,29 @@ const Navbar = ({display}) => {
                   <Link className='duration-1000' onClick={handleNav} to="/#contact">
                      <li onClick={handleRol} className='py-4 text-sm uppercase'>Contact</li>
                   </Link>
-                  <a href={Resume} without rel="noopener noreferrer" target="_blank">
-                     <li style={{display: `${display}`}} className='py-4 text-sm uppercase'>Resume</li>
-                  </a>
                   </ul>
                   <div className='pt-40'>
                      <p className='uppercase tracking-widest text-[#5651e5]'>Let's Connect</p>
                      <div className='flex justify-between items-center my-4 w-full sm:w-[80%]'>
-                        <div className='sm:p-3 rounded-full shadow-lg shadow-gray-400 p-2 cursor-pointer hover:scale-105 ease-in duration-300'>
+                        <a href='https://linkedin.com/in/muhammad-abdullah-mushtaq' target="_blank" without rel="noopener noreferrer" className='sm:p-3 rounded-full shadow-lg shadow-gray-400 p-2 cursor-pointer hover:scale-105 ease-in duration-300'>
                         <FaLinkedinIn />
-                        </div>
-                        <div className='sm:p-3 rounded-full shadow-lg shadow-gray-400 p-2 cursor-pointer hover:scale-105 ease-in duration-300'>
+                        </a>
+                        <a href='https://github.com/MuhammadAbdullahMushtaq/' target="_blank" without rel="noopener noreferrer" className='sm:p-3 rounded-full shadow-lg shadow-gray-400 p-2 cursor-pointer hover:scale-105 ease-in duration-300'>
                         <FaGithub />
-                        </div>
-                        <div className='sm:p-3 rounded-full shadow-lg shadow-gray-400 p-2 cursor-pointer hover:scale-105 ease-in duration-300'>
+                        </a>
+                        <a href='mailto:abdullahmushtaq08@gmail.com' target="_blank" without rel="noopener noreferrer" className='sm:p-3 rounded-full shadow-lg shadow-gray-400 p-2 cursor-pointer hover:scale-105 ease-in duration-300'>
                         <AiOutlineMail />
-                        </div>
-                        <div className='sm:p-3 rounded-full shadow-lg shadow-gray-400 p-2 cursor-pointer hover:scale-105 ease-in duration-300'>
+                        </a>
+                        <a href={Resume} without rel="noopener noreferrer" target="_blank" className='sm:p-3 rounded-full shadow-lg shadow-gray-400 p-2 cursor-pointer hover:scale-105 ease-in duration-300'>
                         <BsFillPersonLinesFill />
-                        </div>
+                        </a>
                      </div>
                   </div>
                </div>
             </div>
          </div>
-
       </div>
+      
    )
 }
 

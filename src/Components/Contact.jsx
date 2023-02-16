@@ -1,13 +1,26 @@
 import React from 'react'
+import ContactImg from '../assets/contact.jpg'
+import Resume from '../assets/MuhammadAbdullahMushtaq.pdf'
 import { AiOutlineMail } from 'react-icons/ai'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
-import { HiOutlineChevronDoubleUp } from 'react-icons/hi'
-import ContactImg from '../assets/contact.jpg'
 
 const Contact = () => {
+
+   const clearInputs = () => {
+         Array.from(document.querySelectorAll("input")).forEach(
+            input => (input.value = "")
+         );
+         Array.from(document.querySelectorAll("textarea")).forEach(
+            input => (input.value = "")
+         );
+         // this.setState({
+         //    itemvalues: [{}]
+         // });
+      }
+
    return (
-      <div id='contact' className='w-full lg:h-screen'>
+      <div id='contact' className='w-full'>
 
       <div className='max-w-[1240px] m-auto px-3 py-16 w-full'>
          <p className='text-xl tracking-widest uppercase text-[#5651e5]'>Contact</p>
@@ -28,18 +41,18 @@ const Contact = () => {
                   <div>
                      <p className='uppercase pt-8'>Connect With Me</p>
                      <div className='flex justify-between items-center py-4'>
-                        <div className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
+                        <a href='https://linkedin.com/in/muhammad-abdullah-mushtaq' target="_blank" without rel="noopener noreferrer" className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
                            <FaLinkedinIn />
-                        </div>
-                        <div className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
+                        </a>
+                        <a href='https://github.com/MuhammadAbdullahMushtaq/' target="_blank" without rel="noopener noreferrer" className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
                            <FaGithub />
-                        </div>
-                        <div className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
+                        </a>
+                        <a href='mailto:abdullahmushtaq08@gmail.com' target="_blank" without rel="noopener noreferrer" className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
                            <AiOutlineMail />
-                        </div>
-                        <div className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
+                        </a>
+                        <a href={Resume} without rel="noopener noreferrer" target="_blank" className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
                            <BsFillPersonLinesFill />
-                        </div>
+                        </a>
                      </div>
                   </div>
                </div>
@@ -49,42 +62,35 @@ const Contact = () => {
 
             <div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4'>
                <div className='p-4'>
-                  <form>
+                  <form action='https://getform.io/f/2a31df75-c496-41eb-b996-2288610d76f0' method='POST' >
                      <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
                         <div className='flex flex-col'>
-                           <label className='uppercase text-sm py-2'>Name</label>
-                           <input className='border-2 rounded-lg p-3 flex border-gray-300' type="text" />
+                           <label className='uppercase text-sm py-2'>Name<span className='text-red-700 text-base pl-1'>*</span></label>
+                           <input required type="text" name='name' className='border-2 rounded-lg p-3 flex border-gray-300' />
                         </div>
                         <div className='flex flex-col'>
-                           <label className='uppercase text-sm py-2'>Phone Number</label>
-                           <input className='border-2 rounded-lg p-3 flex border-gray-300' type="text" />
+                           <label className='uppercase text-sm py-2'>WhatsApp Contact<span className='text-red-700 text-base pl-1'>*</span></label>
+                           <input required type="tel" pattern="[0-9]{4}-[0-9]{7}" placeholder='0000-0000000' name='phone' className='border-2 rounded-lg p-3 flex border-gray-300' />
                         </div>
                      </div>
                      <div className='flex flex-col py-2'>
-                        <label className='uppercase text-sm py-2'>Email</label>
-                        <input className='border-2 rounded-lg p-3 flex border-gray-300' type="email" />
+                        <label className='uppercase text-sm py-2'>Email<span className='text-red-700 text-base pl-1'>*</span></label>
+                        <input required type="email" name='email' className='border-2 rounded-lg p-3 flex border-gray-300' />
                      </div>
                      <div className='flex flex-col py-2'>
-                        <label className='uppercase text-sm py-2'>Subject</label>
-                        <input className='border-2 rounded-lg p-3 flex border-gray-300' type="text" />
+                        <label title="fields marked with * are required" className='uppercase text-sm py-2 cursor-pointer'>Subject<span className='text-red-700 text-base pl-1'>*</span></label>
+                        <input required type="text" name='subject' className='border-2 rounded-lg p-3 flex border-gray-300' />
+                        <input type="hidden" name='_customFieldName' style={{display:'none !important'}} />
                      </div>
                      <div className='flex flex-col py-2'>
-                        <label className='uppercase text-sm py-2'>Message</label>
-                        <textarea className='border-2 rounded-lg p-3 border-gray-300' rows='8'></textarea>
+                        <label className='uppercase text-sm py-2'>Message<span className='text-red-700 text-base pl-1'>*</span></label>
+                        <textarea required name='message' minLength='20' maxLength='500' className='border-2 rounded-lg p-3 border-gray-300' rows='8'></textarea>
                      </div>
-                     <button className='w-full p-4 text-gray-100 mt-4'>send message</button>
+                     <button type='submit' onClick={setTimeout(clearInputs, 1)} className='w-full p-4 mt-4 text-gray-100 bg-gradient-to-r from-[#5651e5] to-[#709dff]'>send message</button>
                   </form>
                </div>
             </div>
 
-         </div>
-
-         <div className='flex justify-center py-12'>
-            <a href='#navbar'>
-               <div className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300' >
-                  <HiOutlineChevronDoubleUp className='text-[#5651e5]' size={30} />
-               </div>
-            </a>
          </div>
 
       </div>
