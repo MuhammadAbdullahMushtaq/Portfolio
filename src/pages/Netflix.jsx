@@ -49,6 +49,3 @@ const Netflix = () => {
 }
 
 export default Netflix
-
-// //how to change the value of a state variable when width will be 768px?
-//Source: https://stackoverflow.com/questions/19014250

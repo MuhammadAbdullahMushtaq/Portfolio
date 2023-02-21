@@ -7,16 +7,13 @@ import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 
 const Contact = () => {
 
-   const clearInputs = () => {
+   const clearInputs = event => {
          Array.from(document.querySelectorAll("input")).forEach(
             input => (input.value = "")
          );
          Array.from(document.querySelectorAll("textarea")).forEach(
             input => (input.value = "")
          );
-         // this.setState({
-         //    itemvalues: [{}]
-         // });
       }
 
    return (
@@ -62,6 +59,7 @@ const Contact = () => {
 
             <div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4'>
                <div className='p-4'>
+
                   <form action='https://getform.io/f/2a31df75-c496-41eb-b996-2288610d76f0' method='POST' >
                      <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
                         <div className='flex flex-col'>
@@ -78,7 +76,7 @@ const Contact = () => {
                         <input required type="email" name='email' className='border-2 rounded-lg p-3 flex border-gray-300' />
                      </div>
                      <div className='flex flex-col py-2'>
-                        <label title="fields marked with * are required" className='uppercase text-sm py-2 cursor-pointer'>Subject<span className='text-red-700 text-base pl-1'>*</span></label>
+                        <label title="fields marked with * are required" className='uppercase text-sm py-2'>Subject<span className='text-red-700 text-base pl-1'>*</span></label>
                         <input required type="text" name='subject' className='border-2 rounded-lg p-3 flex border-gray-300' />
                         <input type="hidden" name='_customFieldName' style={{display:'none !important'}} />
                      </div>
@@ -86,7 +84,7 @@ const Contact = () => {
                         <label className='uppercase text-sm py-2'>Message<span className='text-red-700 text-base pl-1'>*</span></label>
                         <textarea required name='message' minLength='20' maxLength='500' className='border-2 rounded-lg p-3 border-gray-300' rows='8'></textarea>
                      </div>
-                     <button type='submit' onClick={setTimeout(clearInputs, 1)} className='w-full p-4 mt-4 text-gray-100 bg-gradient-to-r from-[#5651e5] to-[#709dff]'>send message</button>
+                     <button type='submit' onSubmit={setTimeout(clearInputs, 1)} className='w-full p-4 mt-4 text-gray-100 bg-gradient-to-r from-[#5651e5] to-[#709dff]'>send message</button>
                   </form>
                </div>
             </div>
