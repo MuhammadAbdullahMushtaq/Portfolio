@@ -11,19 +11,28 @@ const Form = () => {
 
    const onSubmit = (data) => {
       setLoader(true)
-      // console.log(data);
+      console.log(data);
       fetch('https://getform.io/f/2a31df75-c496-41eb-b996-2288610d76f0', {
          method: 'POST',
-         body: data,
+         body: JSON.stringify(data),
          headers: {
-            "Accept": "application/json",
+            'Accept': 'application/json, text/plain, */*',
+            'Content-Type': 'application/json'
          },
       })
       .then((response) => {
-         setLoader(false);
-         clearInputs()
-         toast.success("Message Delivered Successfully...");
-         console.log(response);
+         if (response.status == 200 ) {
+            console.log(response.status);
+            setLoader(false);
+            // clearInputs()
+            toast.success("Message Delivered Successfully...");
+            console.log(response);
+         }
+         else{
+            setLoader(false);
+            toast.error("Error Occurred Try Again");
+            console.log(response.status);
+         }
       })
       .catch((error) => {
          setTimeout(()=>{
