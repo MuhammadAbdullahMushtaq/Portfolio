@@ -21,10 +21,10 @@ const Form = () => {
          },
       })
       .then((response) => {
-         if (response.status == 200 ) {
+         if (response.status === 200 ) {
             console.log(response.status);
             setLoader(false);
-            // clearInputs()
+            clearInputs()
             toast.success("Message Delivered Successfully...");
             console.log(response);
          }
