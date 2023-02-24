@@ -22,11 +22,11 @@ const Form = () => {
       })
       .then((response) => {
          if (response.status === 200 ) {
-            console.log(response.status);
             setLoader(false);
             clearInputs()
             toast.success("Message Delivered Successfully...");
             console.log(response);
+            console.log(response.status);
          }
          else{
             setLoader(false);
@@ -79,7 +79,7 @@ const Form = () => {
                   <label title="Fields marked with * are required" className='uppercase text-sm py-2'>Subject<span className='text-red-500 text-base pl-1'>*</span></label>
                   <input type="text" {...register('subject', { required: true, maxLength: 100 })} className='border-2 rounded-lg p-3 flex border-gray-300' />
                   { errors.subject && <p className='text-red-500'>Subject is Required</p> }
-                  <input type="hidden" name='_customFieldName' style={{display:'none !important'}} />
+                  <input type="hidden" {...register( '_customFieldName' )} style={{display:'none !important'}} />
                </div>
                <div className='flex flex-col py-2'>
                   <label title="Fields marked with * are required" className='uppercase text-sm py-2'>Message<span className='text-red-500 text-base pl-1'>*</span></label>
