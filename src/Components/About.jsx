@@ -23,9 +23,6 @@ const About = () => {
             freelancing for e—commerce companies on the Shopify platform. I am now spending my time
             building projects with React JS, Firebase, and learning new technologies.
             </p>
-            <p className='py-2 text-gray-600 cursor-pointer underline'>
-               Check out some of my latest projects.
-            </p>
          </div>
          <div className='w-[95%] m-auto p-4 flex justify-center items-center rounded-xl shadow-xl shadow-gray-400 hover:scale-105 ease-in duration-300 sm:w-[90%] md:w-ful'>
             <img className='rounded-xl' src={Image} alt="about" />
