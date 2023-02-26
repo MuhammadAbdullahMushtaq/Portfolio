@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import ProjectItems from './ProjectItems'
-import WeatherAppImg from '../assets/projects/WeatherAp.jpg'
+
+import WeatherAppImg from '../assets/projects/WeatherApp.png'
 import ECommerceImg from '../assets/projects/ECommerce.jpg'
-import DictionaryImg from '../assets/projects/netflix.jpg'
-import TwitchImg from '../assets/projects/twitch.jpg'
+import DictionaryImg from '../assets/projects/Dictionary.png'
+import QuizImg from '../assets/projects/QuizApp.png'
+import NotebookImg from '../assets/projects/Notebook.png'
 
 const Projects = () => {
   return (
@@ -17,8 +19,8 @@ const Projects = () => {
             <ProjectItems id="weather" title='Weather App' tech="React Js" backgroundImg={WeatherAppImg} projectUrl='/weather' />
             <ProjectItems id="ecommerce" title='ECommerce UI' tech="Html Css Js" backgroundImg={ECommerceImg} projectUrl='/ecommerce' />
             <ProjectItems id="dictionary" title='Dictionary App' tech="React Js" backgroundImg={DictionaryImg} projectUrl='/dictionary' />
-            <ProjectItems id="quiz" title='Quiz App' tech="Html Css Js" backgroundImg={TwitchImg} projectUrl='/quiz' />
-            <ProjectItems id="notebook" title='Notes Book' tech="Html Css Js" backgroundImg={TwitchImg} projectUrl='/notebook' />
+            <ProjectItems id="quiz" title='Quiz App' tech="Html Css Js" backgroundImg={QuizImg} projectUrl='/quiz' />
+            <ProjectItems id="notebook" title='Notes Book' tech="Html Css Js" backgroundImg={NotebookImg} projectUrl='/notebook' />
 
          </div>
          <Link to={'/allProjects'} >
