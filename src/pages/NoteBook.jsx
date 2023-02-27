@@ -24,9 +24,9 @@ const NoteBook = () => {
       <div className='max-w-[1240px] mx-auto p-4 grid md:grid-cols-5 gap-6 pt-8'>
          <div className='col-span-5 md:col-span-4'>
             <h2>Overview</h2>
-            <p>Add Description</p>
+            <p className='my-3'>The notebook website is built using HTML, CSS, and JavaScript with a Firebase database. JavaScript is used to add interactivity to the website and handle user input. Firebase is used as a backend database to store user data, such as notes and user information. <br/> The website uses Firebase's Realtime Database feature to store and retrieve user data in real-time.<br/> The website's JavaScript code is responsible for handling user input and interacting with the Firebase database. For example, When a user creates a new note, JavaScript code sends a request to the Firebase database to create a new record. <br/> When a user updates or deletes a note, JavaScript code updates or deletes the record in the Firebase database.</p>
             <h2 className='text-2xl'>Hosted Platform</h2>
-            <p className='text-lg'>Firebase</p>
+            <p className='text-lg my-2'>Firebase</p>
             <button className='px-6 py-1 mt-4 mr-8 sm:px-8 sm:py-2'><a href="https://onlinedata-form.web.app/" target="_blank" without rel="noopener noreferrer" >DEMO</a></button>
             <button className='px-6 py-1 mt-4 sm:px-8 sm:py-2'><a href="https://github.com/MuhammadAbdullahMushtaq/NoteBook" target="_blank" without rel="noopener noreferrer" >CODE</a></button>
          </div>

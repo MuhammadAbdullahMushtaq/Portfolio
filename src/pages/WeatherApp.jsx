@@ -24,9 +24,9 @@ const WeatherApp = () => {
       <div className='max-w-[1240px] mx-auto p-4 grid md:grid-cols-5 gap-6 pt-8'>
          <div className='col-span-5 md:col-span-4'>
             <h2>Overview</h2>
-            <p>Get accurate and up-to-date weather information for locations around the world on website. Built with React JS, Bootstrap and Open Weather API. Displays the weather forecast of any location across the world. Provides details about the temperature and weather condition. It is hosted on Firebase.</p>
+            <p className='my-3'>Welcome to weather website, where you can find accurate and up-to-date information on the weather conditions in your area and around the world. Built with React JS, Bootstrap and Open Weather API. <br/> To ensure that data is reliable and comprehensive, I have integrated the Open Weather API, which provides real-time weather updates from a vast network of weather stations worldwide. <br/> The API returns data in JSON format, which can be easily consumed by the website built using React. The website will use the API to fetch current weather conditions. With this powerful tool, you can see accurate and current information on temperature, Condition.</p>
             <h2 className='text-2xl'>Hosted Platform</h2>
-            <p className='text-lg'>Firebase</p>
+            <p className='text-lg my-2' >Firebase</p>
             <button className='px-6 py-1 mt-4 mr-8 sm:px-8 sm:py-2'><a href="https://weatherapp-react-ae5b5.web.app/ " target="_blank" without rel="noopener noreferrer" >DEMO</a></button>
             <button className='px-6 py-1 mt-4 sm:px-8 sm:py-2'><a href="https://github.com/MuhammadAbdullahMushtaq/WeatherApp-React" target="_blank" without rel="noopener noreferrer" >CODE</a></button>
          </div>

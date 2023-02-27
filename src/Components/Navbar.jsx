@@ -78,8 +78,8 @@ const Navbar = () => {
                      </div>
                   </div>
                   <div className='border-b border-gray-300 my-4'>
-                     <p className='w-[85%] md:w-[90%] my-4'>
-                        Let's Build Some Design Together.
+                     <p className='w-[100%] md:w-[90%] text-[12px] sm:text-[14px] my-4 uppercase'>
+                     Let's design together and build something amazing!
                      </p>
                   </div>
                </div>

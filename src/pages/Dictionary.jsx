@@ -24,9 +24,9 @@ const Dictionary = () => {
       <div className='max-w-[1240px] mx-auto p-4 grid md:grid-cols-5 gap-6 pt-8'>
          <div className='col-span-5 md:col-span-4'>
             <h2>Overview</h2>
-            <p>Add Description</p>
+            <p className='my-3'>The Dictionary website built using React, Material UI, Dictionary Api and axios is a dynamic web application that provides users with the ability to search for the meanings and definitions of words. <br/> The website integrates with a Dictionary API using the axios library to fetch data from the API in real-time. This allows users to receive accurate and up-to-date definitions. The API also provides information such as adverb, adjective, pronunciation.The website is designed with a user-friendly interface that allows users to easily search for words and navigate through the different sections of the website. The search bar is prominently displayed on the homepage, making it easy for users to enter the word they are looking for. <br/> Once a user enters a word, the website sends a request to the API and displays the results on the page. The results are organized in a clear and concise manner, with the definition, part of speech, and example sentences displayed prominently. <br/> The Dictionary website also includes additional feature such as the ability to save words to a favorites list.</p>
             <h2 className='text-2xl'>Hosted Platform</h2>
-            <p className='text-lg'>Netlify</p>
+            <p className='text-lg my-2'>Netlify</p>
             <button className='px-6 py-1 mt-4 mr-8 sm:px-8 sm:py-2'><a href="https://reactdict.netlify.app/" target="_blank" without rel="noopener noreferrer" >DEMO</a></button>
             <button className='px-6 py-1 mt-4 sm:px-8 sm:py-2'><a href="https://github.com/MuhammadAbdullahMushtaq/React_Dictionary" target="_blank" without rel="noopener noreferrer" >CODE</a></button>
          </div>

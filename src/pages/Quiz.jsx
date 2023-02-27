@@ -24,9 +24,9 @@ const Quiz = () => {
       <div className='max-w-[1240px] mx-auto p-4 grid md:grid-cols-5 gap-6 pt-8'>
          <div className='col-span-5 md:col-span-4'>
             <h2>Overview</h2>
-            <p>Add Description</p>
+            <p className='my-3'>A quiz website built using HTML, CSS, and JavaScript is an engaging and interactive platform that allows users to test their knowledge on various subjects. The quiz page itself can have a timer, multiple-choice questions. The website can also provide immediate feedback to users by displaying their scores and correct answers after they submit the quiz. <br/> In the JavaScript code, the website uses variables to store data, such as the user's score, the questions and answers for the quiz, and the current question number. The website uses arrays to store multiple pieces of data, such as the questions and answers for the quiz. <br/> The website also uses functions to perform specific tasks, such as checking the user's answer and updating the user's score. Functions can be called multiple times throughout the code, making the code more efficient and easier to maintain. <br/> </p>
             <h2 className='text-2xl'>Hosted Platform</h2>
-            <p className='text-lg'>Firebase</p>
+            <p className='text-lg my-2'>Firebase</p>
             <button className='px-6 py-1 mt-4 mr-8 sm:px-8 sm:py-2'><a href="https://links-images.web.app/" target="_blank" without rel="noopener noreferrer" >DEMO</a></button>
             <button className='px-6 py-1 mt-4 sm:px-8 sm:py-2'><a href="https://github.com/MuhammadAbdullahMushtaq/QuizApp" target="_blank" without rel="noopener noreferrer" >CODE</a></button>
          </div>

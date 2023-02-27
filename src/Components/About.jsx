@@ -9,19 +9,13 @@ const About = () => {
             <p className='uppercase text-xl tracking-widest text-[#5651e5]'>About</p>
             <h2 className='py-4'>Who I Am</h2>
             <p className='py-2 text-gray-600'>
-               I am not your normal developer
             </p>
             <p className='py-2 text-gray-600'>
-            I have spent the last 12 years in the fire service working as a professional firefighter &
-            paramedic. I have always had a knack for and working with computers. In 2019 1
-            started working with HTML & CSS to make some minor edits on a small business website that I
-            was operating. What I thought was just a few small edits turned into a love for programming.
+            Welcome to my Portfolio! I am an Entry-level Frontend Developer with a passion for creating beautiful and functional websites. As a recent graduate in Computer Science, I have honed my skills in ,React Js, HTML, CSS, and JavaScript, and I am excited to showcase my abilities through the projects that I have completed.
+            Whether it's designing responsive layouts, creating engaging user interfaces, or implementing dynamic functionality, I am committed to delivering high-quality work that exceeds expectations. I am eager to continue learning and growing as a developer, and I believe that my passion for this field, combined with my technical expertise, make me a valuable addition to any team.
             </p>
             <p className='py-2 text-gray-600'>
-            Fascinated with how intricate can be I was quickly drawn to learn more. I started
-            learning javascript and was even more enthused with making websites interactive. I then started
-            freelancing for e—commerce companies on the Shopify platform. I am now spending my time
-            building projects with React JS, Firebase, and learning new technologies.
+            Thank you for visiting my portfolio website, and I invite you to explore my projects to see the range of my abilities as a frontend developer.
             </p>
          </div>
          <div className='w-[95%] m-auto p-4 flex justify-center items-center rounded-xl shadow-xl shadow-gray-400 hover:scale-105 ease-in duration-300 sm:w-[90%] md:w-ful'>

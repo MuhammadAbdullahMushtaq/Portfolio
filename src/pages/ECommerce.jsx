@@ -24,8 +24,8 @@ const ECommerce = () => {
       <div className='max-w-[1240px] mx-auto p-4 grid md:grid-cols-5 gap-6 pt-8'>
          <div className='col-span-5 md:col-span-4'>
             <h2>Overview</h2>
-            <p>Add Description</p>
-            <h2 className='text-2xl'>Hosted Platform</h2>
+            <p className='my-3'>The E-commerce UI website is built using HTML, CSS, JavaScript, and Font Awesome. HTML is used to create the structure and content of the website, while CSS is used to style and layout the webpage. JavaScript is used to add interactivity and dynamic behavior to the website, such as showing and hiding elements based on user actions or updating the content without refreshing the page.<br/> In summary, the E-commerce UI website is a responsive and visually appealing website built using HTML, CSS, JavaScript, and Font Awesome. It provides a user-friendly interface for customers to browse and purchase products, with various features like search bars, shopping carts, and social media integration.</p>
+            <h2 className='text-2xl my-2'>Hosted Platform</h2>
             <p className='text-lg'>Firebase</p>
             <button className='px-6 py-1 mt-4 mr-8 sm:px-8 sm:py-2'><a href="https://webcv-b5851.web.app/ " target="_blank" without rel="noopener noreferrer" >DEMO</a></button>
             <button className='px-6 py-1 mt-4 sm:px-8 sm:py-2'><a href="https://github.com/MuhammadAbdullahMushtaq/RedStore_ECom" target="_blank" without rel="noopener noreferrer" >CODE</a></button>
