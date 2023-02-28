@@ -26,8 +26,7 @@ const Portfolio = () => {
             <h2>Overview</h2>
             <p className='my-3'>Welcome to my portfolio website, which I developed using React, Tailwind CSS, Getform.io, and React Toastify. Let me provide you with an explanation of these terms and how they contributed to the development of my website. <br/><br/> Getform.io is a form backend service that allows developers to add forms to their websites without having to write any backend code. With Getform, developers can create custom forms, collect data, and receive form submissions via email. This service simplifies the process of handling form submissions, making it easy to integrate forms into any website. <br/><br/> Overall, the combination of React, Tailwind CSS, Getform.io, and React Toastify has allowed me to create a dynamic, responsive portfolio website that is easy to use and visually appealing. The use of these technologies has simplified the development process and provided a range of useful tools for creating a high-quality website.</p>
             <h2 className='text-2xl'>Hosted Platform</h2>
-            <p className='text-lg my-2'>.....</p>
-            <button className='px-6 py-1 mt-4 mr-8 sm:px-8 sm:py-2'><a href="#" target="_blank" without rel="noopener noreferrer" >DEMO</a></button>
+            <p className='text-lg my-2'>Netlify</p>
             <button className='px-6 py-1 mt-4 sm:px-8 sm:py-2'><a href="https://github.com/MuhammadAbdullahMushtaq/Portfolio" target="_blank" without rel="noopener noreferrer" >CODE</a></button>
          </div>
 
